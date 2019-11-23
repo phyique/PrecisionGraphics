@@ -1,0 +1,84 @@
+@scripts = {
+    <script type="text/javascript" src="@routes.Assets.versioned("javascripts/carousal.js")"></script>
+
+        <!-- Script to Activate the Carousel -->
+    <script>
+            $('.carousel').carousel({
+                interval: 5000 //changes the speed
+            })
+    </script>
+}
+
+@headTags = {
+    <link href="@routes.Assets.versioned("javascripts/carousal.js")" media="print, screen" rel="Stylesheet"
+    type="text/css"/>
+}
+
+@main("Welcome to Play", scripts, headTags) {
+
+    <div class="container">
+
+            <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 id='pageheader' class="page-header">About</h1>
+                <ol class="breadcrumb">
+                    <li><a href="@routes.HomeController.index()">Home</a>
+                    </li>
+                    <li class="active">About</li>
+                </ol>
+            </div>
+        </div>
+            <!-- /.row -->
+
+            <!-- Intro Content -->
+        <div class="row">
+            <div class="col-md-6">
+                <img class="img-responsive" src="{% static 'precision/images/machine.jpg' %}" alt="">
+            </div>
+            <div class="col-md-6">
+                <h2 id='pageheader'>About Us</h2>
+                <p>For over fourteen years, Precision Graphics has provided excellent quality printing and on time
+                    delivery to all our customers. Established in 1997, the growth and development of our company has
+                    been ably nurtured and developed by Patrick Wynter and his dedicated and experienced team. We
+                    understand the need for fast turnaround and Precision delivers on time, every time. We utilize a
+                    variety of machinery to ensure your satisfaction, such as single and multi-coloured presses capable
+                    of producing the highest quality lithography. We are especially proud of our five-colour press, a
+                    sophisticated machine guaranteed to produce work worthy of a double-take.</p>
+                <p>Our presses are supported by computer controls to reduce printing time and improve overall quality.
+                    Supporting our five colour Heidelberg printing Press is a modern state-of-the-art Computer to Plate
+                    (CTP) system in our pre-press department. This enables us to reduce our pre-press operation time and
+                    improve the quality of our output delivery.</p>
+                <p>To complement our high quality full colour printing we are equipped with a modern bindery with state
+                    of the art MBO folding machines, programmed Polar cutter, and Horizon perfect binder. This equipment
+                    gurantees quality and accuracy for all our jobs big and small.</p>
+                <p>Our state-of-the-art printing equipment ensures that we deliver. Leave the hassle to us!</p>
+            </div>
+        </div>
+            <!-- /.row -->
+
+            <!-- Our Customers -->
+        <div id='about' class="row">
+            <div class="col-lg-12">
+                <h2 id='pageheader' class="page-header">Our Customers</h2>
+            </div>
+            <div class="col-md-4 text-center">
+                <img class="img-responsive" src="{% static 'precision/images/JSE-Logo.png' %}" alt="">
+            </div>
+            <div class="col-md-4 text-center">
+                <img class="img-responsive" src="{% static 'precision/images/jol_logo.jpg' %}" alt="">
+            </div>
+            <div class="col-md-4 text-center">
+                <img class="img-responsive" src="{% static 'precision/images/JMMB.jpg' %}" alt="">
+            </div>
+
+        </div>
+            <!-- /.row -->
+
+
+            <!-- Footer -->
+
+    </div>
+
+}
+
