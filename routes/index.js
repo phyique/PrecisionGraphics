@@ -14,12 +14,24 @@ router.get('/about', (req, res) => {
   res.render('about', {title: 'About Us'})
 });
 
-router.get('/career', (req, res) => {
-  res.render('career', {title: 'Careers'})
+router.get('/careers', (req, res) => {
+  res.render('careers', {title: 'Careers'})
 });
 
-router.get('/contact', (req, res) => {
-  res.render('contact', { title: 'About Us' });
+router.get('/products', (req, res) => {
+  res.render('products', {title: 'Products'})
+});
+
+router.get('/quotes', (req, res) => {
+  res.render('quote', {title: 'Products'})
+});
+
+router.get('/uploads', (req, res) => {
+  res.render('upload', {title: 'Uploads'})
+});
+
+router.get('/contacts', (req, res) => {
+  res.render('contact', { title: 'Contact Us' });
 });
 
 module.exports = router;
